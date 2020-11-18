@@ -1,4 +1,5 @@
 import { MikroORM } from '@mikro-orm/core';
+import { __prod__ } from './contstants';
 
 const main = async () => {
   const orm = await MikroORM.init({
