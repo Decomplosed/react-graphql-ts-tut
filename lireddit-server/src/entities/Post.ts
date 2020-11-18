@@ -5,6 +5,6 @@ export class Post {
   @PrimaryKey()
   id!: number;
 
-  @Property
+  @Property()
   createdAt = new Date();
 }
