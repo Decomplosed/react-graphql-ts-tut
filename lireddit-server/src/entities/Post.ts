@@ -4,4 +4,7 @@ import { Entity, PrimaryKey, Property } from '@mikro-orm/core';
 export class Post {
   @PrimaryKey()
   id!: number;
+
+  @Property
+  createdAt = new Date();
 }
