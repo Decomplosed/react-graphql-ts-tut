@@ -1,3 +1,5 @@
 import { MikroORM } from '@mikro-orm/core';
 
-const orm = MikroORM.init();
+const main = async () => {
+  const orm = MikroORM.init();
+};
