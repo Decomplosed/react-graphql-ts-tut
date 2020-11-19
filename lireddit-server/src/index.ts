@@ -4,7 +4,7 @@ import { Post } from './entities/Post';
 
 const main = async () => {
   const orm = await MikroORM.init({
-    entities: [],
+    entities: [Post],
     dbName: 'lireddit',
     type: 'postgresql',
     debug: !__prod__,
