@@ -7,4 +7,4 @@ export default {
   dbName: 'lireddit',
   type: 'postgresql',
   debug: !__prod__,
-} as const;
+} as Parameters<typeof MikroORM.init>[];
