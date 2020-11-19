@@ -3,6 +3,10 @@ import { __prod__ } from './contstants';
 import { MikroORM } from '@mikro-orm/core';
 
 export default {
+  migrations: {
+    path: './migrations',
+    pattern: /^[\w-]+\d+\.ts$/,
+  },
   entities: [Post],
   dbName: 'lireddit',
   type: 'postgresql',
