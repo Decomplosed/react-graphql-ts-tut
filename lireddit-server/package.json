@@ -28,7 +28,7 @@
   "mikro-orm": {
     "useTsNode": true,
     "configPaths": [
-      "./src/mikro-rom.config.ts",
+      "./src/mikro-orm.config.ts",
       "./dist/mikro-orm.config.js"
     ]
   }
