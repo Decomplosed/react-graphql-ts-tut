@@ -10,7 +10,7 @@ const main = async () => {
     debug: !__prod__,
   });
 
-  orm.em.create(Post, {})
+  const post = orm.em.create(Post, { title: 'my first post' });
 };
 
 main();
