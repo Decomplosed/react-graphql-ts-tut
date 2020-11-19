@@ -29,7 +29,7 @@
     "useTsNode": true,
     "configPaths": [
       "./src/mikro-rom.config.ts",
-      "./dist/mikro-orm/config.js"
+      "./dist/mikro-orm.config.js"
     ]
   }
 }
