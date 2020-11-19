@@ -9,6 +9,8 @@ const main = async () => {
     type: 'postgresql',
     debug: !__prod__,
   });
+
+  orm.em.create(Post, {})
 };
 
 main();
