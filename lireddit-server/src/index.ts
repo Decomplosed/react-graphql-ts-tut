@@ -14,4 +14,6 @@ const main = async () => {
   await orm.em.persistAndFlush(post);
 };
 
-main();
+main().catch((err) => {
+  console.error(err);
+});
