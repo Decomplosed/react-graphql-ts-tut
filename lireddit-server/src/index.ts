@@ -11,6 +11,7 @@ const main = async () => {
   });
 
   const post = orm.em.create(Post, { title: 'my first post' });
+  orm.em.persistAndFlush(post);
 };
 
 main();
