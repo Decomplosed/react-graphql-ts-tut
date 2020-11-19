@@ -5,7 +5,7 @@ import { MikroORM } from '@mikro-orm/core';
 export default {
   migrations: {
     path: './migrations',
-    pattern: /^[\w-]+\d+\.ts$/,
+    pattern: /^[\w-]+\d+\.[tj]s$/,
   },
   entities: [Post],
   dbName: 'lireddit',
