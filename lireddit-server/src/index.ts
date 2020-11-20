@@ -11,7 +11,9 @@ const main = async () => {
 
   const app = express();
 
-  const apolloServer = new ApolloServer();
+  const apolloServer = new ApolloServer({
+    schema: await buildSchema()
+  });
 
   app.listen(4000, () => {
     console.log('Server started on localhost:4000');
