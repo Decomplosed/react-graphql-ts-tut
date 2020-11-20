@@ -5,6 +5,7 @@ import microConfig from './mikro-orm.config';
 import express from 'express';
 
 const main = async () => {
+  const app = express();
   const orm = await MikroORM.init(microConfig);
   await orm.getMigrator().up();
 
