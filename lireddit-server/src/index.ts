@@ -2,6 +2,7 @@ import { MikroORM } from '@mikro-orm/core';
 import { __prod__ } from './contstants';
 import { Post } from './entities/Post';
 import microConfig from './mikro-orm.config';
+import express from 'express';
 
 const main = async () => {
   const orm = await MikroORM.init(microConfig);
