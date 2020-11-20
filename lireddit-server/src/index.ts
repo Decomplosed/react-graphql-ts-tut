@@ -9,6 +9,9 @@ const main = async () => {
   await orm.getMigrator().up();
 
   const app = express();
+  app.get('/', (_, res) => {
+    res.send('hello');
+  });
   app.listen(4000, () => {
     console.log('Server started on localhost:4000');
   });
