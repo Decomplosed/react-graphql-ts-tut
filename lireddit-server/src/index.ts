@@ -9,6 +9,9 @@ const main = async () => {
   await orm.getMigrator().up();
 
   const app = express();
+
+  const apolloServer = new ApolloServer();
+
   app.listen(4000, () => {
     console.log('Server started on localhost:4000');
   });
