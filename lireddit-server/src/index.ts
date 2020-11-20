@@ -5,15 +5,13 @@ import microConfig from './mikro-orm.config';
 import express from 'express';
 
 const main = async () => {
-  const app = express();
   const orm = await MikroORM.init(microConfig);
   await orm.getMigrator().up();
 
-  // const post = orm.em.create(Post, { title: 'my first post' });
-  // await orm.em.persistAndFlush(post);
-
-  const posts = await orm.em.find(Post, {});
-  console.log(posts);
+  const app = express();
+  app.listen(4000, () => {
+    console.log('Server started on localhost:4000');
+  });
 };
 
 main().catch((err) => {
