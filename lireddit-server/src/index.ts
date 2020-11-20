@@ -12,7 +12,10 @@ const main = async () => {
   const app = express();
 
   const apolloServer = new ApolloServer({
-    schema: await buildSchema()
+    schema: await buildSchema({
+      resolvers: [],
+      validate: false,
+    }),
   });
 
   app.listen(4000, () => {
