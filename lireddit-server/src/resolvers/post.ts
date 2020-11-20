@@ -3,6 +3,6 @@ import { Post } from '../entities/Post';
 
 @Resolver()
 export class PostResolver {
-  @Query(
+  @Query(() => [Post])
   posts() {}
 }
