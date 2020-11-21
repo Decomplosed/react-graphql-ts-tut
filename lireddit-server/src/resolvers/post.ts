@@ -26,4 +26,14 @@ export class PostResolver {
     await em.persistAndFlush(post);
     return post;
   }
+
+  @Mutation(() => Post)
+  async updatePost(
+    @Arg('title') title: string,
+    @Ctx() { em }: MyContext,
+  ): Promise<Post> {
+    const post = em.create(Post, { title });
+    await em.persistAndFlush(post);
+    return post;
+  }
 }
