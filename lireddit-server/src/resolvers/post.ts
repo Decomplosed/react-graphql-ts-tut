@@ -8,4 +8,12 @@ export class PostResolver {
   posts(@Ctx() { em }: MyContext): Promise<Post[]> {
     return em.find(Post, {});
   }
+
+  @Query(() => [Post])
+  post(
+    @Arg('id', () => Int), id: number,
+    @Ctx() { em }: MyContext,
+  ): Promise<Post[]> {
+    return em.find(Post, {});
+  }
 }
