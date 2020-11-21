@@ -4,5 +4,7 @@ import { Post } from '../entities/Post';
 @Resolver()
 export class PostResolver {
   @Query(() => [Post])
-  posts() {}
+  posts() {
+    return 'bye';
+  }
 }
