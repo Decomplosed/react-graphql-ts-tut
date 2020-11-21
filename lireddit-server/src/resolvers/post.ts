@@ -16,4 +16,12 @@ export class PostResolver {
   ): Promise<Post | null> {
     return em.findOne(Post, { id });
   }
+
+  @Mutation(() => Post, { nullable: true })
+  createPost(
+    @Arg('id', () => Int) id: number,
+    @Ctx() { em }: MyContext,
+  ): Promise<Post | null> {
+    return em.findOne(Post, { id });
+  }
 }
