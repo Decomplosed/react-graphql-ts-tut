@@ -23,6 +23,7 @@ export class PostResolver {
     @Ctx() { em }: MyContext,
   ): Promise<Post | null> {
     em.create(Post, { title });
-    return em.findOne(Post, { id });
+    await em.persistAndFlush(post);
+    return post;
   }
 }
