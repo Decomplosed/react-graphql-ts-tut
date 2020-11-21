@@ -13,7 +13,7 @@ export class PostResolver {
   post(
     @Arg('id', () => Int) id: number,
     @Ctx() { em }: MyContext,
-  ): Promise<Post[]> {
+  ): Promise<Post | null> {
     return em.findOne(Post, { id });
   }
 }
