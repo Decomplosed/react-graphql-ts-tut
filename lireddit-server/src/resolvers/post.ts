@@ -17,7 +17,7 @@ export class PostResolver {
     return em.findOne(Post, { id });
   }
 
-  @Mutation(() => Post, { nullable: true })
+  @Mutation(() => Post)
   createPost(
     @Arg('id', () => Int) id: number,
     @Ctx() { em }: MyContext,
