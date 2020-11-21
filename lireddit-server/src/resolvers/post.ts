@@ -30,7 +30,7 @@ export class PostResolver {
   @Mutation(() => Post)
   async updatePost(
     @Arg('id') id: string,
-    @Arg('title') title: string,
+    @Arg('title', () => String, { nullable: true }) title: string,
     @Ctx() { em }: MyContext,
   ): Promise<Post> {
     const post = em.create(Post, { title });
