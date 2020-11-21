@@ -29,6 +29,7 @@ export class PostResolver {
 
   @Mutation(() => Post)
   async updatePost(
+    @Arg('id') id: string,
     @Arg('title') title: string,
     @Ctx() { em }: MyContext,
   ): Promise<Post> {
