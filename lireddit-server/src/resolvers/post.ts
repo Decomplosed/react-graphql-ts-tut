@@ -19,7 +19,7 @@ export class PostResolver {
 
   @Mutation(() => Post)
   createPost(
-    @Arg('id', () => Int) id: number,
+    @Arg('title', () => String) title: string,
     @Ctx() { em }: MyContext,
   ): Promise<Post | null> {
     return em.findOne(Post, { id });
