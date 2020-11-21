@@ -11,9 +11,9 @@ export class PostResolver {
 
   @Query(() => [Post])
   post(
-    @Arg('id', () => Int), id: number,
+    @Arg('id', () => Int) id: number,
     @Ctx() { em }: MyContext,
   ): Promise<Post[]> {
-    return em.find(Post, {});
+    return em.findOne(Post, { id });
   }
 }
