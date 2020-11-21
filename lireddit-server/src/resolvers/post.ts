@@ -9,7 +9,7 @@ export class PostResolver {
     return em.find(Post, {});
   }
 
-  @Query(() => [Post])
+  @Query(() => Post, { nullable: true })
   post(
     @Arg('id', () => Int) id: number,
     @Ctx() { em }: MyContext,
