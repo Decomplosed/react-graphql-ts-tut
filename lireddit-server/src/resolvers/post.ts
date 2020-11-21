@@ -22,6 +22,7 @@ export class PostResolver {
     @Arg('title') title: string,
     @Ctx() { em }: MyContext,
   ): Promise<Post | null> {
+    em.create(Post, { title });
     return em.findOne(Post, { id });
   }
 }
