@@ -38,10 +38,10 @@ export class PostResolver {
       return null;
     }
 
-    if (typeof title !== 'undefined'){
-
+    if (typeof title !== 'undefined') {
+      post.title = title;
+      await em.persistAndFlush(post);
     }
-    post.title = title;
 
     return post;
   }
