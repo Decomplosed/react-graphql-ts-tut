@@ -45,4 +45,13 @@ export class PostResolver {
 
     return post;
   }
+
+  @Mutation(() => Post)
+  async deletePost(
+    @Arg('id') id: number,
+    @Arg('title', () => String, { nullable: true }) title: string,
+    @Ctx() { em }: MyContext,
+  ): Promise<Post | null> {
+    return post;
+  }
 }
