@@ -38,6 +38,11 @@ export class PostResolver {
       return null;
     }
 
+    if (typeof title !== 'undefined'){
+
+    }
+    post.title = title;
+
     return post;
   }
 }
