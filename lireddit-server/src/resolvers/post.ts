@@ -53,6 +53,6 @@ export class PostResolver {
   ): Promise<boolean> {
     await em.nativeDelete(Post, { id });
 
-    return post;
+    return true;
   }
 }
