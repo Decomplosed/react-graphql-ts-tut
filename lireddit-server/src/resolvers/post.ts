@@ -49,9 +49,8 @@ export class PostResolver {
   @Mutation(() => Boolean)
   async deletePost(
     @Arg('id') id: number,
-    @Arg('title', () => String, { nullable: true }) title: string,
     @Ctx() { em }: MyContext,
-  ): Promise<Post | null> {
+  ): Promise<boolean> {
     return post;
   }
 }
