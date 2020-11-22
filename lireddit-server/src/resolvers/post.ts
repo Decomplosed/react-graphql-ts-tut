@@ -33,6 +33,7 @@ export class PostResolver {
     @Arg('title', () => String, { nullable: true }) title: string,
     @Ctx() { em }: MyContext,
   ): Promise<Post> {
+    const post = em.findOne(Post, { id });
     const post = em.create(Post, { title });
     await em.persistAndFlush(post);
     return post;
