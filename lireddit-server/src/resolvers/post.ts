@@ -35,6 +35,7 @@ export class PostResolver {
   ): Promise<Post> {
     const post = em.findOne(Post, { id });
     if (!post) {
+      return null;
     }
 
     return post;
