@@ -32,7 +32,7 @@ export class PostResolver {
     @Arg('id') id: number,
     @Arg('title', () => String, { nullable: true }) title: string,
     @Ctx() { em }: MyContext,
-  ): Promise<Post> {
+  ): Promise<Post | null> {
     const post = em.findOne(Post, { id });
     if (!post) {
       return null;
