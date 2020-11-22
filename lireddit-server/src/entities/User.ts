@@ -15,4 +15,8 @@ export class User {
   @Field(() => String)
   @Property({ type: 'date', onUpdate: () => new Date() })
   updatedAt = new Date();
+
+  @Field()
+  @Property({ type: 'text' })
+  username!: string;
 }
