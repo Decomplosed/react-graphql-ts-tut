@@ -23,5 +23,7 @@ export class UserResolver {
   register(
     @Arg('options') options: UsernamePasswordInput,
     @Ctx() { em }: MyContext,
-  ) {}
+  ) {
+    const user = em.create(User, {});
+  }
 }
