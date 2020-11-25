@@ -9,6 +9,7 @@ import {
   Ctx,
 } from 'type-graphql';
 import { User } from '../entities/User';
+import argon2 from 'argon2';
 
 @InputType()
 class UsernamePasswordInput {
