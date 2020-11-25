@@ -20,7 +20,7 @@ class UsernamePasswordInput {
 @Resolver()
 export class UserResolver {
   @Mutation(() => String)
-  register(
+  async register(
     @Arg('options') options: UsernamePasswordInput,
     @Ctx() { em }: MyContext,
   ) {
