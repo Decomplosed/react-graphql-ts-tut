@@ -12,6 +12,6 @@ class UsernamePasswordInput {
 export class UserResolver {
   @Mutation(() => String)
   register(
-    @Arg()
+    @Arg('options')
   ) {}
 }
