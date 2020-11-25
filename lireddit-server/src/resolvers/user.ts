@@ -24,5 +24,6 @@ export class UserResolver {
       password: hashedPassword,
     });
     await em.persistAndFlush(user);
+    return user;
   }
 }
