@@ -20,5 +20,8 @@ class UsernamePasswordInput {
 @Resolver()
 export class UserResolver {
   @Mutation(() => String)
-  register(@Arg('options') options: UsernamePasswordInput @Ctx() {em}: MyContext) {}
+  register(
+    @Arg('options') options: UsernamePasswordInput,
+    @Ctx() { em }: MyContext,
+  ) {}
 }
