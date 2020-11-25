@@ -4,6 +4,8 @@ import { Resolver, Query, Mutation, Arg, InputType, Field } from 'type-graphql';
 class UsernamePasswordInput {
   @Field()
   username: string
+  @Field()
+  password: string
 }
 
 @Resolver()
