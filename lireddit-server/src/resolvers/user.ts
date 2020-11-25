@@ -1,5 +1,13 @@
 import { MyContext } from 'src/types';
-import { Resolver, Query, Mutation, Arg, InputType, Field, Ctx } from 'type-graphql';
+import {
+  Resolver,
+  Query,
+  Mutation,
+  Arg,
+  InputType,
+  Field,
+  Ctx,
+} from 'type-graphql';
 
 @InputType()
 class UsernamePasswordInput {
