@@ -25,5 +25,6 @@ export class UserResolver {
     @Ctx() { em }: MyContext,
   ) {
     const user = em.create(User, { username: options.username });
+    em.persistAndFlush(user);
   }
 }
