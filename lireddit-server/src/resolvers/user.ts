@@ -3,15 +3,13 @@ import { Resolver, Query, Mutation, Arg, InputType, Field } from 'type-graphql';
 @InputType()
 class UsernamePasswordInput {
   @Field()
-  username: string
+  username: string;
   @Field()
-  password: string
+  password: string;
 }
 
 @Resolver()
 export class UserResolver {
   @Mutation(() => String)
-  register(
-    @Arg('options')
-  ) {}
+  register(@Arg('options') options: UsernamePasswordInput) {}
 }
