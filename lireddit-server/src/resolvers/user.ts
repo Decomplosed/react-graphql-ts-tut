@@ -8,6 +8,7 @@ import {
   Field,
   Ctx,
 } from 'type-graphql';
+import { User } from '../entities/User';
 
 @InputType()
 class UsernamePasswordInput {
