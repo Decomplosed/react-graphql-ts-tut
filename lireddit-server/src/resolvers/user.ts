@@ -42,7 +42,7 @@ export class UserResolver {
   async register(
     @Arg('options') options: UsernamePasswordInput,
     @Ctx() { em }: MyContext,
-  ) {
+  ): Promise<UserResponse> {
     if (options.username.length <= 2) {
       return {
         errors: [{}],
