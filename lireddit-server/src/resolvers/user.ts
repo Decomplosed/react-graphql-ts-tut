@@ -64,7 +64,7 @@ export class UserResolver {
         errors: [
           {
             field: 'username',
-            message: "That username doesn't exist!",
+            message: "That username doesn't exist",
           },
         ],
       };
@@ -72,6 +72,7 @@ export class UserResolver {
     const valid = await argon2.verify(user.password, options.password);
 
     if (!valid) {
+      errors: [{ field: 'password', message: 'Incorrect password' }];
     }
   }
 }
