@@ -69,5 +69,6 @@ export class UserResolver {
         ],
       };
     }
+    const valid = await argon2.verify()
   }
 }
