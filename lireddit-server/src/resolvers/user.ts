@@ -52,7 +52,7 @@ export class UserResolver {
     return user;
   }
 
-  @Mutation(() => User)
+  @Mutation(() => UserResponse)
   async login(
     @Arg('options') options: UsernamePasswordInput,
     @Ctx() { em }: MyContext,
