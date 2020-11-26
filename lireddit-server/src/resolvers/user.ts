@@ -20,7 +20,10 @@ class UsernamePasswordInput {
 }
 
 @ObjectType()
-class FieldError {}
+class FieldError {
+  @Field()
+  field: string;
+}
 
 @ObjectType()
 class UserResponse {
