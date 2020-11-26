@@ -69,6 +69,6 @@ export class UserResolver {
         ],
       };
     }
-    const valid = await argon2.verify()
+    const valid = await argon2.verify(user.password, options.password);
   }
 }
