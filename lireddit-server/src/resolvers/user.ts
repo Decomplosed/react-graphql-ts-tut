@@ -20,7 +20,10 @@ class UsernamePasswordInput {
 }
 
 @ObjectType()
-class UserResponse {}
+class UserResponse {
+  @Field()
+  errors: Error[];
+}
 
 @Resolver()
 export class UserResolver {
