@@ -20,6 +20,9 @@ class UsernamePasswordInput {
 }
 
 @ObjectType()
+class FieldError {}
+
+@ObjectType()
 class UserResponse {
   @Field(() => [Error], { nullable: true })
   errors?: Error[];
