@@ -43,6 +43,12 @@ export class UserResolver {
     @Arg('options') options: UsernamePasswordInput,
     @Ctx() { em }: MyContext,
   ) {
+    if (options.username.length <= 2) {
+      return {
+        errors: [{}],
+      };
+    }
+
     const hashedPassword = await argon2.hash(options.password);
     const user = em.create(User, {
       username: options.username,
