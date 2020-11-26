@@ -45,7 +45,12 @@ export class UserResolver {
   ): Promise<UserResponse> {
     if (options.username.length <= 2) {
       return {
-        errors: [{}],
+        errors: [
+          {
+            field: 'username',
+            message: 'Length must be greater than 2',
+          },
+        ],
       };
     }
 
