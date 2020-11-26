@@ -23,6 +23,8 @@ class UsernamePasswordInput {
 class FieldError {
   @Field()
   field: string;
+  @Field()
+  message: string;
 }
 
 @ObjectType()
