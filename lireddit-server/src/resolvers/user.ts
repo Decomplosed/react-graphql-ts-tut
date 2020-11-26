@@ -44,10 +44,10 @@ export class UserResolver {
   ) {
     const user = await em.findOne(User, { username: options.username });
 
-    if(!user) {
+    if (!user) {
       return {
-        errors: [{}]
-      }
+        errors: [{}],
+      };
     }
   }
 }
