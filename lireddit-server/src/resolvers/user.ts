@@ -23,6 +23,9 @@ class UsernamePasswordInput {
 class UserResponse {
   @Field()
   errors: Error[];
+
+  @Field()
+  user: User;
 }
 
 @Resolver()
