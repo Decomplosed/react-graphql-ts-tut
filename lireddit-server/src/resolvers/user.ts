@@ -22,10 +22,10 @@ class UsernamePasswordInput {
 @ObjectType()
 class UserResponse {
   @Field()
-  errors: Error[];
+  errors?: Error[];
 
   @Field()
-  user: User;
+  user?: User;
 }
 
 @Resolver()
@@ -43,6 +43,7 @@ export class UserResolver {
     await em.persistAndFlush(user);
     return user;
   }
+
   @Mutation(() => User)
   async login(
     @Arg('options') options: UsernamePasswordInput,
