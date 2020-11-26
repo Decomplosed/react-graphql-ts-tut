@@ -24,7 +24,7 @@ class UserResponse {
   @Field(() => [Error], { nullable: true })
   errors?: Error[];
 
-  @Field()
+  @Field(() => User, { nullable: true })
   user?: User;
 }
 
