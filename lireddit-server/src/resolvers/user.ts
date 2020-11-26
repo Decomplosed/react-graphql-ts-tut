@@ -19,6 +19,9 @@ class UsernamePasswordInput {
   password: string;
 }
 
+@ObjectType()
+class UserResponse {}
+
 @Resolver()
 export class UserResolver {
   @Mutation(() => User)
