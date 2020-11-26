@@ -74,5 +74,7 @@ export class UserResolver {
     if (!valid) {
       errors: [{ field: 'password', message: 'Incorrect password' }];
     }
+
+    return { user };
   }
 }
