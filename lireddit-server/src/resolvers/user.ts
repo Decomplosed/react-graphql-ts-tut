@@ -31,6 +31,6 @@ export class UserResolver {
     @Arg('options') options: UsernamePasswordInput,
     @Ctx() { em }: MyContext,
   ) {
-    const user = em.findOne(User, { username: options.username });
+    const user = em.findOneOrFail(User, { username: options.username });
   }
 }
