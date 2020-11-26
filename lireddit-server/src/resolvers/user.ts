@@ -29,8 +29,8 @@ class FieldError {
 
 @ObjectType()
 class UserResponse {
-  @Field(() => [Error], { nullable: true })
-  errors?: Error[];
+  @Field(() => [FieldError], { nullable: true })
+  errors?: FieldError[];
 
   @Field(() => User, { nullable: true })
   user?: User;
