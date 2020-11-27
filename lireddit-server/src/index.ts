@@ -13,6 +13,7 @@ import session from 'express-session';
 import connectRedis from 'connect-redis';
 
 const RedisStore = connectRedis(session);
+const redisClient = redis.createClient();
 
 const main = async () => {
   const orm = await MikroORM.init(microConfig);
