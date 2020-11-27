@@ -35,6 +35,7 @@ const main = async () => {
         sameSite: 'lax',
         secure: __prod__,
       },
+      saveUninitialized: false,
       secret: 'idjasifjasif',
       resave: false,
     }),
