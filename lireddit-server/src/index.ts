@@ -24,7 +24,11 @@ const main = async () => {
   app.use(
     session({
       name: 'qid',
-      store: new RedisStore({ client: redisClient, disableTouch: true }),
+      store: new RedisStore({
+        client: redisClient,
+        disableTouch: true,
+        disableTTL: true,
+      }),
       secret: 'idjasifjasif',
       resave: false,
     }),
