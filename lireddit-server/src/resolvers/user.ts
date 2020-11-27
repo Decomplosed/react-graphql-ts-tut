@@ -72,8 +72,11 @@ export class UserResolver {
     });
 
     try {
-    } catch (error) {}
-    await em.persistAndFlush(user);
+      await em.persistAndFlush(user);
+    } catch (error) {
+      console.log('message: ', error);
+    }
+
     return { user };
   }
 
