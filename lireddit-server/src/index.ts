@@ -21,7 +21,14 @@ const main = async () => {
   const RedisStore = connectRedis(session);
   const redisClient = redis.createClient();
 
-  app.use(session);
+  app.use(
+    session({
+      name: 'qid',
+      store: new RedisStore({ client: redisClient }),
+      secret: 'idjasifjasif',
+      resave: false,
+    }),
+  );
 
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
