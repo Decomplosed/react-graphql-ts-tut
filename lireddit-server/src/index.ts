@@ -10,6 +10,7 @@ import { PostResolver } from './resolvers/post';
 import { UserResolver } from './resolvers/user';
 import redis from 'redis';
 import session from 'express-session';
+import connectRedis from 'connect-redis';
 
 const main = async () => {
   const orm = await MikroORM.init(microConfig);
