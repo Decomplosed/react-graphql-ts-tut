@@ -113,7 +113,7 @@ export class UserResolver {
       errors: [{ field: 'password', message: 'Incorrect password' }];
     }
 
-    req.session
+    req.session.userId = user.id;
 
     return { user };
   }
