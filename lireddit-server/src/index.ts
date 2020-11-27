@@ -12,14 +12,14 @@ import redis from 'redis';
 import session from 'express-session';
 import connectRedis from 'connect-redis';
 
-const RedisStore = connectRedis(session);
-const redisClient = redis.createClient();
-
 const main = async () => {
   const orm = await MikroORM.init(microConfig);
   await orm.getMigrator().up();
 
   const app = express();
+
+  const RedisStore = connectRedis(session);
+  const redisClient = redis.createClient();
 
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
