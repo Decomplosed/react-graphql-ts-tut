@@ -74,7 +74,7 @@ export class UserResolver {
     try {
       await em.persistAndFlush(user);
     } catch (error) {
-      console.log('message: ', error);
+      console.log('message: ', error.message);
     }
 
     return { user };
