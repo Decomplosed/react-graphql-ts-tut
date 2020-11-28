@@ -44,6 +44,8 @@ export class UserResolver {
     if (!req.session.userId) {
       return null;
     }
+
+    const user =
   }
 
   @Mutation(() => UserResponse)
