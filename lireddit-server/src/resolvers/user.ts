@@ -98,6 +98,8 @@ export class UserResolver {
       console.log('message: ', error.message);
     }
 
+    req.session.userId = user.id;
+
     return { user };
   }
 
