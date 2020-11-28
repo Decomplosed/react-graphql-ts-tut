@@ -5,7 +5,7 @@ interface registerProps {}
 
 const Register: React.FC<registerProps> = ({}) => {
   return (
-    <Formik>
+    <Formik initialValues={{ username: '', password: '' }}>
       {() => (
         <Form>
           <div>Hello</div>
