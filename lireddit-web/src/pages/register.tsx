@@ -2,6 +2,8 @@ import React from 'react';
 
 interface registerProps {}
 
-export const register: React.FC<registerProps> = ({}) => {
+const Register: React.FC<registerProps> = ({}) => {
   return ();
 }
+
+export default Register;
