@@ -1,14 +1,10 @@
 import React from 'react';
-import { Formik } from 'formik';
+import { Formik, Form } from 'formik';
 
 interface registerProps {}
 
 const Register: React.FC<registerProps> = ({}) => {
-  return (
-    <Formik>
-      <form></form>
-    </Formik>
-  );
+  return <Formik>{() => <Form></Form>}</Formik>;
 };
 
 export default Register;
