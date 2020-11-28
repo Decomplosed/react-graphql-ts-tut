@@ -40,7 +40,10 @@ class UserResponse {
 @Resolver()
 export class UserResolver {
   @Query(() => User, { nullable: true })
-  me(@Ctx() { req }: MyContext) {}
+  me(@Ctx() { req }: MyContext) {
+    if (!req.session.userId) {
+    }
+  }
 
   @Mutation(() => UserResponse)
   async register(
