@@ -4,7 +4,11 @@ import { Formik } from 'formik';
 interface registerProps {}
 
 const Register: React.FC<registerProps> = ({}) => {
-  return <div>Register Page</div>;
+  return (
+    <Formik>
+      <form></form>
+    </Formik>
+  );
 };
 
 export default Register;
