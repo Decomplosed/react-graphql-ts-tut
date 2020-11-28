@@ -46,6 +46,7 @@ export class UserResolver {
     }
 
     const user = await em.findOne(User, { id: req.session.userId });
+    return user;
   }
 
   @Mutation(() => UserResponse)
