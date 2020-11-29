@@ -20,6 +20,7 @@ const Register: React.FC<registerProps> = ({}) => {
           <FormControl>
             <FormLabel htmlFor='username'>Username</FormLabel>
             <Input id='username' placeholder='Username' />
+            <FormErrorMessage></FormErrorMessage>
           </FormControl>
         </Form>
       )}
