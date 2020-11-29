@@ -19,7 +19,11 @@ const Register: React.FC<registerProps> = ({}) => {
         <Form>
           <FormControl>
             <FormLabel htmlFor='username'>Username</FormLabel>
-            <Input id='username' placeholder='Username' />
+            <Input
+              value={values.username}
+              id='username'
+              placeholder='Username'
+            />
             <FormErrorMessage></FormErrorMessage>
           </FormControl>
         </Form>
