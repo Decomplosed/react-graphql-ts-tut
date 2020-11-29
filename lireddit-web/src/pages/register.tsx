@@ -25,7 +25,7 @@ const Register: React.FC<registerProps> = ({}) => {
               id='username'
               placeholder='Username'
             />
-            <FormErrorMessage></FormErrorMessage>
+            {/* <FormErrorMessage></FormErrorMessage> */}
           </FormControl>
         </Form>
       )}
