@@ -13,7 +13,7 @@ const Register: React.FC<registerProps> = ({}) => {
       {() => (
         <Form>
           <FormControl>
-            <FormLabel></FormLabel>
+            <FormLabel htmlFor='username'>Username</FormLabel>
           </FormControl>
         </Form>
       )}
