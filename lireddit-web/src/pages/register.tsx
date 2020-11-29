@@ -12,7 +12,9 @@ const Register: React.FC<registerProps> = ({}) => {
     >
       {() => (
         <Form>
-          <FormControl></FormControl>
+          <FormControl>
+            <FormLabel></FormLabel>
+          </FormControl>
         </Form>
       )}
     </Formik>
