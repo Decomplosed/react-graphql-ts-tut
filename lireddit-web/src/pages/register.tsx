@@ -15,7 +15,7 @@ const Register: React.FC<registerProps> = ({}) => {
       initialValues={{ username: '', password: '' }}
       onSubmit={(values) => console.log(values)}
     >
-      {() => (
+      {(values, handleChange) => (
         <Form>
           <FormControl>
             <FormLabel htmlFor='username'>Username</FormLabel>
