@@ -6,6 +6,7 @@ import {
   FormLabel,
   Input,
 } from '@chakra-ui/react';
+import Wrapper from '../components/Wrapper';
 
 interface registerProps {}
 
