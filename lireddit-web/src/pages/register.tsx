@@ -17,7 +17,7 @@ const Register: React.FC<registerProps> = ({}) => {
       onSubmit={(values) => console.log(values)}
     >
       {(values, handleChange) => (
-        <Wrapper>
+        <Wrapper variant='small'>
           <Form>
             <FormControl>
               <FormLabel htmlFor='username'>Username</FormLabel>
