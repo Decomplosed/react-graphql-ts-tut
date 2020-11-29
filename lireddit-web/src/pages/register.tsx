@@ -17,18 +17,20 @@ const Register: React.FC<registerProps> = ({}) => {
       onSubmit={(values) => console.log(values)}
     >
       {(values, handleChange) => (
-        <Form>
-          <FormControl>
-            <FormLabel htmlFor='username'>Username</FormLabel>
-            <Input
-              value={values.username}
-              onChange={handleChange}
-              id='username'
-              placeholder='Username'
-            />
-            {/* <FormErrorMessage></FormErrorMessage> */}
-          </FormControl>
-        </Form>
+        <Wrapper>
+          <Form>
+            <FormControl>
+              <FormLabel htmlFor='username'>Username</FormLabel>
+              <Input
+                value={values.username}
+                onChange={handleChange}
+                id='username'
+                placeholder='Username'
+              />
+              {/* <FormErrorMessage></FormErrorMessage> */}
+            </FormControl>
+          </Form>
+        </Wrapper>
       )}
     </Formik>
   );
