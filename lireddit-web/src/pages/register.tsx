@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-import { FormControl } from '@chakra-ui/react';
+import { FormControl, FormLabel } from '@chakra-ui/react';
 
 interface registerProps {}
 
