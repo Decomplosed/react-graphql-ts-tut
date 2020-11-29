@@ -4,7 +4,11 @@ import { Box } from '@chakra-ui/react';
 interface WrapperProps {}
 
 const Wrapper: React.FC<WrapperProps> = ({ children }) => {
-  return <Box>{children}</Box>;
+  return (
+    <Box maxW='800px' w='100%' mt={8} mx='auto'>
+      {children}
+    </Box>
+  );
 };
 
 export default Wrapper;
