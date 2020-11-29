@@ -21,6 +21,7 @@ const Register: React.FC<registerProps> = ({}) => {
             <FormLabel htmlFor='username'>Username</FormLabel>
             <Input
               value={values.username}
+              onChange={handleChange}
               id='username'
               placeholder='Username'
             />
