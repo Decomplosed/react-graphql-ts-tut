@@ -1,11 +1,5 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-import {
-  FormControl,
-  FormErrorMessage,
-  FormLabel,
-  Input,
-} from '@chakra-ui/react';
 import Wrapper from '../components/Wrapper';
 
 interface registerProps {}
