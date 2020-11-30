@@ -14,7 +14,9 @@ type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
 const InputField: React.FC<InputFieldProps> = ({}) => {
   const [field] = useField(props);
 
-  return;
+  return (
+    <FormControl></FormControl>
+  )
 };
 
 export default InputField;
