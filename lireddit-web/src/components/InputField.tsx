@@ -12,7 +12,7 @@ type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
 };
 
 const InputField: React.FC<InputFieldProps> = ({}) => {
-  const [field] = useField(props);
+  const [field, { error }] = useField(props);
 
   return (
     <FormControl>
