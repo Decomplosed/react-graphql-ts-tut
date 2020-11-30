@@ -13,7 +13,9 @@ const Register: React.FC<registerProps> = ({}) => {
     >
       {(values, handleChange) => (
         <Wrapper variant='small'>
-          <Form></Form>
+          <Form>
+            <InputField />
+          </Form>
         </Wrapper>
       )}
     </Formik>
