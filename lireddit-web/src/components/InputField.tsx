@@ -19,7 +19,7 @@ const InputField: React.FC<InputFieldProps> = (props) => {
   return (
     <FormControl isInvalid={!!error}>
       <FormLabel htmlFor={field.name}>{props.label}</FormLabel>
-      <Input id={field.name} {...field} placeholder={props.placeholder} />
+      <Input {...field} id={field.name} placeholder={props.placeholder} />
       {error ? <FormErrorMessage>{error}</FormErrorMessage> : null}
     </FormControl>
   );
