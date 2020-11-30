@@ -17,8 +17,9 @@ const InputField: React.FC<InputFieldProps> = ({}) => {
   return (
     <FormControl>
       <FormLabel></FormLabel>
+      <Input />
     </FormControl>
-  )
+  );
 };
 
 export default InputField;
