@@ -13,7 +13,7 @@ type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
   placeholder: string;
 };
 
-const InputField: React.FC<InputFieldProps> = ({}) => {
+const InputField: React.FC<InputFieldProps> = (props) => {
   const [field, { error }] = useField(props);
 
   return (
