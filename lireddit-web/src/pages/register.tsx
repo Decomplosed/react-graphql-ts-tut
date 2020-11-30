@@ -23,6 +23,7 @@ const Register: React.FC<registerProps> = ({}) => {
               name='password'
               placeholder='password'
               label='Password'
+              type='password'
             />
           </Form>
         </Wrapper>
