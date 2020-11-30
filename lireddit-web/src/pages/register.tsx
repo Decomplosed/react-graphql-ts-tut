@@ -19,7 +19,7 @@ const Register: React.FC<registerProps> = ({}) => {
               placeholder='username'
               label='Username'
             />
-            <Box>
+            <Box mt={4}>
               <InputField
                 name='password'
                 placeholder='password'
