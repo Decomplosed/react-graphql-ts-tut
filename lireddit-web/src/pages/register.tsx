@@ -12,7 +12,7 @@ const Register: React.FC<registerProps> = ({}) => {
       initialValues={{ username: '', password: '' }}
       onSubmit={(values) => console.log(values)}
     >
-      {(values, handleChange) => (
+      {({ values, handleChange }) => (
         <Wrapper variant='small'>
           <Form>
             <InputField
@@ -28,6 +28,7 @@ const Register: React.FC<registerProps> = ({}) => {
                 type='password'
               />
             </Box>
+            <Button></Button>
           </Form>
         </Wrapper>
       )}
