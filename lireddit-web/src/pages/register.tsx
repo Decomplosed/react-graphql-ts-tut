@@ -18,18 +18,7 @@ const Register: React.FC<registerProps> = ({}) => {
     >
       {(values, handleChange) => (
         <Wrapper variant='small'>
-          <Form>
-            <FormControl>
-              <FormLabel htmlFor='username'>Username</FormLabel>
-              <Input
-                value={values.username}
-                onChange={handleChange}
-                id='username'
-                placeholder='Username'
-              />
-              {/* <FormErrorMessage></FormErrorMessage> */}
-            </FormControl>
-          </Form>
+          <Form></Form>
         </Wrapper>
       )}
     </Formik>
