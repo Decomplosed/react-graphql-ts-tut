@@ -6,7 +6,7 @@ type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
 };
 
 const InputField: React.FC<InputFieldProps> = ({}) => {
-  const [] = useField(props);
+  const [{}] = useField(props);
 
   return;
 };
