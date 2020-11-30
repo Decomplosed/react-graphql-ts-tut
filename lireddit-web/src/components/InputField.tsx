@@ -17,7 +17,7 @@ const InputField: React.FC<InputFieldProps> = ({}) => {
   return (
     <FormControl>
       <FormLabel htmlFor='name'>First name</FormLabel>
-      <Input />
+      <Input {...field} />
       <FormErrorMessage></FormErrorMessage>
     </FormControl>
   );
