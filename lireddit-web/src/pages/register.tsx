@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import Wrapper from '../components/Wrapper';
+import InputField from '../components/Wrapper';
 
 interface registerProps {}
 
