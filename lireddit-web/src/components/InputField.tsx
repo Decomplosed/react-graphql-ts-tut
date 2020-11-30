@@ -15,7 +15,9 @@ const InputField: React.FC<InputFieldProps> = ({}) => {
   const [field] = useField(props);
 
   return (
-    <FormControl></FormControl>
+    <FormControl>
+      <FormLabel></FormLabel>
+    </FormControl>
   )
 };
 
