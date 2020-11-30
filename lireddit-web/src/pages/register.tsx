@@ -14,7 +14,11 @@ const Register: React.FC<registerProps> = ({}) => {
       {(values, handleChange) => (
         <Wrapper variant='small'>
           <Form>
-            <InputField />
+            <InputField
+              name='username'
+              placeholder='username'
+              label='Username'
+            />
           </Form>
         </Wrapper>
       )}
