@@ -28,7 +28,12 @@ const Register: React.FC<registerProps> = ({}) => {
                 type='password'
               />
             </Box>
-            <Button mt={4} type='submit' colorScheme='teal'>
+            <Button
+              mt={4}
+              type='submit'
+              colorScheme='teal'
+              isLoading={isSubmitting}
+            >
               Register
             </Button>
           </Form>
