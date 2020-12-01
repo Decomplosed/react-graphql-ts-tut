@@ -7,7 +7,7 @@ const client = createClient({ url: 'http://localhost:4000/graphql' });
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider>
+    <Provider value={client}>
       <ChakraProvider resetCSS theme={theme}>
         <ColorModeProvider
           options={{
