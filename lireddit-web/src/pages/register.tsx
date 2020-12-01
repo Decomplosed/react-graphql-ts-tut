@@ -8,6 +8,7 @@ import { useMutation } from 'urql';
 interface registerProps {}
 
 const Register: React.FC<registerProps> = ({}) => {
+  const [] = useMutation('');
   return (
     <Formik
       initialValues={{ username: '', password: '' }}
