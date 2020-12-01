@@ -3,6 +3,8 @@ import { Provider, createClient } from 'urql';
 
 import theme from '../theme';
 
+const client = createClient({});
+
 function MyApp({ Component, pageProps }) {
   return (
     <Provider>
