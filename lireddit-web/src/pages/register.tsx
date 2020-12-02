@@ -23,7 +23,7 @@ const REGISTER_MUT = `
 `;
 
 const Register: React.FC<registerProps> = ({}) => {
-  const [{}, register] = useMutation(REGISTER_MUT);
+  const [, register] = useMutation(REGISTER_MUT);
   return (
     <Formik
       initialValues={{ username: '', password: '' }}
