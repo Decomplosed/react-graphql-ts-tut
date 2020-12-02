@@ -84,7 +84,9 @@ export class UserResolver {
     });
 
     try {
-      (em as EntityManager).createQueryBuilder(User).getKnexQuery().insert({});
+      (em as EntityManager).createQueryBuilder(User).getKnexQuery().insert({
+        username: options.username,
+      });
       await em.persistAndFlush(user);
     } catch (error) {
       if (error.code === '23505' || error.detail.includes('already exists')) {
