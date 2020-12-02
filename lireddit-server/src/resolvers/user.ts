@@ -88,6 +88,7 @@ export class UserResolver {
         username: options.username,
         password: hashedPassword,
         createdAt: new Date(),
+        updatedAt: new Date(),
       });
       await em.persistAndFlush(user);
     } catch (error) {
