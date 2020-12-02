@@ -10,6 +10,7 @@ import { useRouter } from 'next/router';
 interface registerProps {}
 
 const Register: React.FC<registerProps> = ({}) => {
+  const router = useRouter();
   const [, register] = useRegisterMutation();
   return (
     <Formik
