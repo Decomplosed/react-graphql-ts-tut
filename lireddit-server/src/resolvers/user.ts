@@ -86,6 +86,7 @@ export class UserResolver {
     try {
       (em as EntityManager).createQueryBuilder(User).getKnexQuery().insert({
         username: options.username,
+        password: hashedPassword,
       });
       await em.persistAndFlush(user);
     } catch (error) {
