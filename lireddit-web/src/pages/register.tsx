@@ -17,9 +17,7 @@ const Register: React.FC<registerProps> = ({}) => {
         const response = await register(values);
 
         if (response.data?.register.errors) {
-          setErrors({
-            username: ''
-          });
+          setErrors(toErrorMap(response.data));
         }
       }}
     >
