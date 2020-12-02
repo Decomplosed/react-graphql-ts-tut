@@ -17,7 +17,7 @@ const Register: React.FC<registerProps> = ({}) => {
         const response = await register(values);
 
         if (response.data?.register.errors) {
-          setErrors(toErrorMap(response.data));
+          setErrors(toErrorMap(response.data.register.errors));
         }
       }}
     >
