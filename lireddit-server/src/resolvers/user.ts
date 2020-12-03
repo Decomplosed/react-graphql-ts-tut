@@ -80,12 +80,15 @@ export class UserResolver {
     const hashedPassword = await argon2.hash(options.password);
 
     try {
-      (em as EntityManager).createQueryBuilder(User).getKnexQuery().insert({
-        username: options.username,
-        password: hashedPassword,
-        created_at: new Date(),
-        updated_at: new Date(),
-      });
+      const [user] = await (em as EntityManager)
+        .createQueryBuilder(User)
+        .getKnexQuery()
+        .insert({
+          username: options.username,
+          password: hashedPassword,
+          created_at: new Date(),
+          updated_at: new Date(),
+        });
     } catch (error) {
       if (error.code === '23505' || error.detail.includes('already exists')) {
         return {
