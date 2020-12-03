@@ -88,7 +88,8 @@ export class UserResolver {
           password: hashedPassword,
           created_at: new Date(),
           updated_at: new Date(),
-        });
+        })
+        .returning('*');
     } catch (error) {
       if (error.code === '23505' || error.detail.includes('already exists')) {
         return {
