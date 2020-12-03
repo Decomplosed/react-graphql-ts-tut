@@ -90,6 +90,8 @@ export class UserResolver {
           updated_at: new Date(),
         })
         .returning('*');
+
+      user = result[0];
     } catch (error) {
       if (error.code === '23505' || error.detail.includes('already exists')) {
         return {
