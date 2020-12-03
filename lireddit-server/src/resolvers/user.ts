@@ -83,10 +83,9 @@ export class UserResolver {
       (em as EntityManager).createQueryBuilder(User).getKnexQuery().insert({
         username: options.username,
         password: hashedPassword,
-        createdAt: new Date(),
-        updatedAt: new Date(),
+        created_at: new Date(),
+        updated_at: new Date(),
       });
-      await em.persistAndFlush(user);
     } catch (error) {
       if (error.code === '23505' || error.detail.includes('already exists')) {
         return {
