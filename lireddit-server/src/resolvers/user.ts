@@ -78,7 +78,7 @@ export class UserResolver {
     }
 
     const hashedPassword = await argon2.hash(options.password);
-
+    let user;
     try {
       const [user] = await (em as EntityManager)
         .createQueryBuilder(User)
