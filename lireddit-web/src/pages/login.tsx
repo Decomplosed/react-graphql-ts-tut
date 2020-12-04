@@ -11,7 +11,7 @@ const Login: React.FC<{}> = () => {
 
   return (
     <Wrapper variant='small'>
-      <Formik></Formik>
+      <Formik initialValues={{ username: '', password: '' }}></Formik>
     </Wrapper>
   );
 };
