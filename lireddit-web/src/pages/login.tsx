@@ -9,5 +9,9 @@ const Login: React.FC<{}> = () => {
   const router = useRouter();
   const [, login] = useLoginMutation();
 
-  return <Wrapper variant='small'></Wrapper>;
+  return (
+    <Wrapper variant='small'>
+      <Formik></Formik>
+    </Wrapper>
+  );
 };
