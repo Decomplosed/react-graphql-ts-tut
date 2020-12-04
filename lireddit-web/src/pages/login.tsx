@@ -24,7 +24,33 @@ const Login: React.FC<{}> = () => {
             router.push('/');
           }
         }}
-      ></Formik>
+      >
+        {({ isSubmitting }) => (
+          <Form>
+            <InputField
+              name='username'
+              placeholder='username'
+              label='Username'
+            />
+            <Box mt={4}>
+              <InputField
+                name='password'
+                placeholder='password'
+                label='Password'
+                type='password'
+              />
+            </Box>
+            <Button
+              mt={4}
+              type='submit'
+              colorScheme='teal'
+              isLoading={isSubmitting}
+            >
+              Register
+            </Button>
+          </Form>
+        )}
+      </Formik>
     </Wrapper>
   );
 };
