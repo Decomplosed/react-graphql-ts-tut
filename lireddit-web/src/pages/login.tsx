@@ -13,7 +13,9 @@ const Login: React.FC<{}> = () => {
     <Wrapper variant='small'>
       <Formik
         initialValues={{ username: '', password: '' }}
-        onSubmit={async (values, { setErrors }) => {}}
+        onSubmit={async (values, { setErrors }) => {
+          const response = await login({ options: values });
+        }}
       ></Formik>
     </Wrapper>
   );
