@@ -6,4 +6,5 @@ import { useRouter } from 'next/router';
 
 const Login: React.FC<{}> = () => {
   const router = useRouter();
+  const [, login] = useLoginMutation();
 };
