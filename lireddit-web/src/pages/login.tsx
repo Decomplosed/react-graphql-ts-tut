@@ -54,3 +54,5 @@ const Login: React.FC<{}> = () => {
     </Wrapper>
   );
 };
+
+export default Login;
