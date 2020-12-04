@@ -13,7 +13,7 @@ const Login: React.FC<{}> = () => {
     <Wrapper variant='small'>
       <Formik
         initialValues={{ username: '', password: '' }}
-        onSubmit={() => {}}
+        onSubmit={async (values, { setErrors }) => {}}
       ></Formik>
     </Wrapper>
   );
