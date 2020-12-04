@@ -8,4 +8,6 @@ import { useLoginMutation } from '../generated/graphql';
 const Login: React.FC<{}> = () => {
   const router = useRouter();
   const [, login] = useLoginMutation();
+
+  return <Wrapper variant='small'></Wrapper>;
 };
