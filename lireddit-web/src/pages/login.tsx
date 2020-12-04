@@ -4,6 +4,7 @@ import { Box, Button } from '@chakra-ui/react';
 import Wrapper from '../components/Wrapper';
 import { useRouter } from 'next/router';
 import { useLoginMutation } from '../generated/graphql';
+import { toErrorMap } from '../utils/toErrorMap';
 
 const Login: React.FC<{}> = () => {
   const router = useRouter();
