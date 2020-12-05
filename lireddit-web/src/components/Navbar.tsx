@@ -4,7 +4,7 @@ interface NavBarProps {}
 
 const NavBar: React.FC<NavBarProps> = ({}) => {
   return (
-    <Box></Box>
+    <Box bg='tomato'></Box>
   )
 };
 
