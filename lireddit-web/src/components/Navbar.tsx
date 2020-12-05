@@ -11,11 +11,8 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
 
   if (fetching) {
   } else if (!data?.me) {
-  } else {
-  }
-  return (
-    <Flex bg='tomato' p={4}>
-      <Box ml={'auto'}>
+    body = (
+      <>
         <NextLink href='/login'>
           <Link color='white' mr={2}>
             Login
@@ -26,7 +23,13 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
             Register
           </Link>
         </NextLink>
-      </Box>
+      </>
+    );
+  } else {
+  }
+  return (
+    <Flex bg='tomato' p={4}>
+      <Box ml={'auto'}></Box>
     </Flex>
   );
 };
