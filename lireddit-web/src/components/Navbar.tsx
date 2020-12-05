@@ -7,6 +7,7 @@ interface NavBarProps {}
 
 const NavBar: React.FC<NavBarProps> = ({}) => {
   const [{ data, fetching }] = useMeQuery();
+  let body = null;
   return (
     <Flex bg='tomato' p={4}>
       <Box ml={'auto'}>
