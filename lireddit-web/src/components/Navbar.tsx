@@ -6,6 +6,7 @@ import { useMeQuery } from '../generated/graphql';
 interface NavBarProps {}
 
 const NavBar: React.FC<NavBarProps> = ({}) => {
+  const [] = useMeQuery();
   return (
     <Flex bg='tomato' p={4}>
       <Box ml={'auto'}>
