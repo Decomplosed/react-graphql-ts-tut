@@ -26,7 +26,12 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
       </>
     );
   } else {
-    body = <Box>{data.me.username}</Box>;
+    body = (
+      <Box>
+        <Box>{data.me.username}</Box>
+        <Button>Logout</Button>
+      </Box>
+    );
   }
   return (
     <Flex bg='tomato' p={4}>
