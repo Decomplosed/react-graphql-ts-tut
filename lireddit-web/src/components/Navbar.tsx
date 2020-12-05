@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Link, Flex } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 interface NavBarProps {}
 
