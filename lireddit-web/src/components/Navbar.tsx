@@ -29,7 +29,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
     body = (
       <Box>
         <Box>{data.me.username}</Box>
-        <Button>Logout</Button>
+        <Button variant='link'>Logout</Button>
       </Box>
     );
   }
