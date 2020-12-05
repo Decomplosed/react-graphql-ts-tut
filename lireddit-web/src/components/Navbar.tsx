@@ -1,12 +1,13 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Link } from '@chakra-ui/react';
 
 interface NavBarProps {}
 
 const NavBar: React.FC<NavBarProps> = ({}) => {
   return (
     <Box bg='tomato' p={4} ml={'auto'}>
-      NAVBAR
+      <Link>Login</Link>
+      <Link>Register</Link>
     </Box>
   );
 };
