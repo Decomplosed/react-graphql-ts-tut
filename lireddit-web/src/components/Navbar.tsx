@@ -1,3 +1,5 @@
 import React from 'react';
 
-interface NavbarProps {}
+interface NavBarProps {}
+
+const NavBar: React.FC<NavBarProps> = ({}) => {};
