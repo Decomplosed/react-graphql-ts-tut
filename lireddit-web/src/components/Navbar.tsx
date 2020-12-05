@@ -8,12 +8,16 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
   return (
     <Flex bg='tomato' p={4}>
       <Box ml={'auto'}>
-        <Link color='white' mr={2}>
-          Login
-        </Link>
-        <Link color='white' mr={2}>
-          Register
-        </Link>
+        <NextLink>
+          <Link color='white' mr={2}>
+            Login
+          </Link>
+        </NextLink>
+        <NextLink>
+          <Link color='white' mr={2}>
+            Register
+          </Link>
+        </NextLink>
       </Box>
     </Flex>
   );
