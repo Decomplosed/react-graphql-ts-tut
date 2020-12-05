@@ -8,12 +8,12 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
   return (
     <Flex bg='tomato' p={4}>
       <Box ml={'auto'}>
-        <NextLink>
+        <NextLink href='/login'>
           <Link color='white' mr={2}>
             Login
           </Link>
         </NextLink>
-        <NextLink>
+        <NextLink href='/register'>
           <Link color='white' mr={2}>
             Register
           </Link>
