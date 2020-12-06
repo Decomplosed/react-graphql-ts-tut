@@ -5,7 +5,6 @@ import { cacheExchange, Cache, QueryInput } from '@urql/exchange-graphcache';
 import theme from '../theme';
 import { MeDocument } from '../generated/graphql';
 
-
 const client = createClient({
   url: 'http://localhost:4000/graphql',
   fetchOptions: {
