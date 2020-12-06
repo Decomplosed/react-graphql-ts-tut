@@ -28,6 +28,7 @@ const client = createClient({
             cache.updateQuery({ query: MeDocument });
             betterUpdateQuery<LoginMutation, MeQuery>(cache, {
               query: MeDocument,
+              result,
             });
           },
         },
