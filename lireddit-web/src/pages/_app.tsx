@@ -10,7 +10,9 @@ function betterUpdateQuery<Result, Query>(
   qi: QueryInput,
   result: any,
   fn: (r: Result, q: Query) => QueryInput,
-) {}
+) {
+  return cache.updateQuery();
+}
 
 const client = createClient({
   url: 'http://localhost:4000/graphql',
