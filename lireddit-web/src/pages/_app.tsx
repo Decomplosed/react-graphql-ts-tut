@@ -48,18 +48,18 @@ const client = createClient({
             );
           },
           register: (_result, cache, args, info) => {
-            betterUpdateQuery<LoginMutation, MeQuery>(
+            betterUpdateQuery<RegisterMutation, MeQuery>(
               cache,
               {
                 query: MeDocument,
               },
               _result,
               (result, query) => {
-                if (result.login.errors) {
+                if (result.register.errors) {
                   return query;
                 } else {
                   return {
-                    me: result.login.user,
+                    me: result.register.user,
                   };
                 }
               },
