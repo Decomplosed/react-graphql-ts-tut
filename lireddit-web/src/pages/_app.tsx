@@ -9,7 +9,7 @@ function betterUpdateQuery<Result, Query>(
   cache: Cache,
   qi: QueryInput,
   result: any,
-  fn: () => QueryInput,
+  fn: (r: Result, q: Query) => QueryInput,
 ) {}
 
 const client = createClient({
