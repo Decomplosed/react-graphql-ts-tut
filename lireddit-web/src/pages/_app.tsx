@@ -1,11 +1,6 @@
 import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react';
-import {
-  Provider,
-  createClient,
-  dedupExchange,
-  cacheExchange,
-  fetchExchange,
-} from 'urql';
+import { Provider, createClient, dedupExchange, fetchExchange } from 'urql';
+import { cacheExchange } from '@urql/exchange-graphcache';
 
 import theme from '../theme';
 
