@@ -25,13 +25,18 @@ const client = createClient({
       updates: {
         Mutation: {
           login: (result, cache, args, info) => {
-            betterUpdateQuery<LoginMutation, MeQuery>(cache, {
-              query: MeDocument,
+            betterUpdateQuery<LoginMutation, MeQuery>(
+              cache,
+              {
+                query: MeDocument,
+              },
               result,
               (result, query) => {
-
-              }
-            });
+                if (result.login.errors) {
+                  return query;
+                }
+              },
+            );
           },
         },
       },
