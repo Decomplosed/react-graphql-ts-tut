@@ -138,4 +138,7 @@ export class UserResolver {
 
     return { user };
   }
+
+  @Mutation(() => Boolean)
+  logout() {}
 }
