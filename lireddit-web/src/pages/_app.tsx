@@ -34,6 +34,10 @@ const client = createClient({
               (result, query) => {
                 if (result.login.errors) {
                   return query;
+                } else {
+                  return {
+                    me: result.login.user,
+                  };
                 }
               },
             );
