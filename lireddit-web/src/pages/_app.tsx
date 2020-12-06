@@ -11,7 +11,7 @@ function betterUpdateQuery<Result, Query>(
   result: any,
   fn: (r: Result, q: Query) => QueryInput,
 ) {
-  return cache.updateQuery();
+  return cache.updateQuery(qi, (data) => fn(result, data as any) as any);
 }
 
 const client = createClient({
