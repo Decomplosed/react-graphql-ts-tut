@@ -42,6 +42,24 @@ const client = createClient({
               },
             );
           },
+          register: (_result, cache, args, info) => {
+            betterUpdateQuery<LoginMutation, MeQuery>(
+              cache,
+              {
+                query: MeDocument,
+              },
+              _result,
+              (result, query) => {
+                if (result.login.errors) {
+                  return query;
+                } else {
+                  return {
+                    me: result.login.user,
+                  };
+                }
+              },
+            );
+          },
         },
       },
     }),
