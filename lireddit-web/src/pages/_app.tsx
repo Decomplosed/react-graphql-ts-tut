@@ -5,7 +5,7 @@ import { cacheExchange, Cache, QueryInput } from '@urql/exchange-graphcache';
 import theme from '../theme';
 import { MeDocument } from '../generated/graphql';
 
-function betterUpdateQuery(
+function betterUpdateQuery<Result, Query>(
   cache: Cache,
   qi: QueryInput,
   result: any,
