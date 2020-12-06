@@ -27,10 +27,10 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
     );
   } else {
     body = (
-      <Box>
+      <Flex>
         <Box>{data.me.username}</Box>
         <Button variant='link'>Logout</Button>
-      </Box>
+      </Flex>
     );
   }
   return (
