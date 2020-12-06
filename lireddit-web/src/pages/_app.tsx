@@ -5,6 +5,8 @@ import { cacheExchange, Cache, QueryInput } from '@urql/exchange-graphcache';
 import theme from '../theme';
 import { MeDocument } from '../generated/graphql';
 
+function betterUpdateQuery(cache: Cache, qi: QueryInput) {}
+
 const client = createClient({
   url: 'http://localhost:4000/graphql',
   fetchOptions: {
