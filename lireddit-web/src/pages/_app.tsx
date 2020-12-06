@@ -9,7 +9,17 @@ const client = createClient({
   fetchOptions: {
     credentials: 'include',
   },
-  exchanges: [dedupExchange, cacheExchange({}), fetchExchange],
+  exchanges: [
+    dedupExchange,
+    cacheExchange({
+      updates: {
+        Mutation: {
+          login: (result, cache, args, info) => {},
+        },
+      },
+    }),
+    fetchExchange,
+  ],
 });
 
 function MyApp({ Component, pageProps }: any) {
