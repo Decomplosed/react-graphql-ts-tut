@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Link, Flex, Button } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { useMeQuery } from '../generated/graphql';
+import { useMeQuery, useLogoutMutation } from '../generated/graphql';
 
 interface NavBarProps {}
 
