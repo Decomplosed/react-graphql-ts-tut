@@ -140,5 +140,7 @@ export class UserResolver {
   }
 
   @Mutation(() => Boolean)
-  logout(@Ctx() { req }: MyContext) {}
+  logout(@Ctx() { req }: MyContext) {
+    req.session.destroy();
+  }
 }
