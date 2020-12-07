@@ -30,7 +30,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
     body = (
       <Flex>
         <Box mr={2}>{data.me.username}</Box>
-        <Button variant='link'>Logout</Button>
+        <Button onClick={} variant='link'>Logout</Button>
       </Flex>
     );
   }
