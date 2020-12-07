@@ -142,7 +142,7 @@ export class UserResolver {
   @Mutation(() => Boolean)
   logout(@Ctx() { req }: MyContext) {
     return new Promise((res) =>
-      req.session.destroy((err) => {
+      req.session.destroy((err: any) => {
         if (err) {
           res(false);
           return;
