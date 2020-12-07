@@ -12,6 +12,7 @@ import {
 import { User } from '../entities/User';
 import argon2 from 'argon2';
 import { EntityManager } from '@mikro-orm/postgresql';
+import { COOKIE_NAME } from 'src/contstants';
 
 @InputType()
 class UsernamePasswordInput {
