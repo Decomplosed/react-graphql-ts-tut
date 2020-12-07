@@ -140,5 +140,5 @@ export class UserResolver {
   }
 
   @Mutation(() => Boolean)
-  logout() {}
+  logout(@Ctx() { req }: MyContext) {}
 }
