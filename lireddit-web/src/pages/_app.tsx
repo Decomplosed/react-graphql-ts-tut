@@ -29,12 +29,18 @@ const client = createClient({
     cacheExchange({
       updates: {
         Mutation: {
-          login: (_result, cache, args, info) => {
+          logout: (_result, args, cache, info) => {
+            betterUpdateQuery<LogoutMutation, MeQuery>(
+              cache,
+              { query: MeDocument },
+              _result,
+              () => ({ me: null }),
+            );
+          },
+          login: (_result, args, cache, info) => {
             betterUpdateQuery<LoginMutation, MeQuery>(
               cache,
-              {
-                query: MeDocument,
-              },
+              { query: MeDocument },
               _result,
               (result, query) => {
                 if (result.login.errors) {
@@ -47,12 +53,10 @@ const client = createClient({
               },
             );
           },
-          register: (_result, cache, args, info) => {
+          register: (_result, args, cache, info) => {
             betterUpdateQuery<RegisterMutation, MeQuery>(
               cache,
-              {
-                query: MeDocument,
-              },
+              { query: MeDocument },
               _result,
               (result, query) => {
                 if (result.register.errors) {
